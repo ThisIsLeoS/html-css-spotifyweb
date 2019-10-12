@@ -1,7 +1,30 @@
 /* reset rules */
+a {
+  color: black;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+
+  /* to overwrite declarations from bootstrap's reboot */
+  margin-bottom: 0;
+  padding-left: 0;
+
+}
 /* /reset rules */
 
 /* rules used or usable in different parts of the page */
+a {
+  transition: color .2s linear;
+}
+
+a svg path {
+  transition: fill .2s linear;
+}
 /* /rules used or usable in different parts of the page */
 
 /* rules used in specific parts of the page */
@@ -11,6 +34,7 @@
     height: 100%;
 
     font-size: 16px;
+    letter-spacing: .015em;
   }
 
   body {
@@ -21,7 +45,7 @@
     font-family: 'Roboto', sans-serif;
   }
 
-  .flex-container-left-navbar-main {
+  .left-navbar-and-main-container {
     display: flex;
 
     /* 90 px is the footer's height  */
@@ -29,9 +53,68 @@
   }
 
   /* left navbar */
-    #left-navbar {
+    .left-navbar {
+      display: flex;
       width: 230px;
+      padding: 20px 0;
       background-color: rgba(0, 0, 0, .8);
+      color: #b3b3b3;
+      flex-direction: column;
+    }
+
+    .left-navbar a {
+      color: #b3b3b3;
+    }
+
+    .left-navbar a:hover {
+      color: white;
+    }
+
+    .left-navbar a:hover svg path {
+      fill: white;
+    }
+
+    .left-navbar-logo-row {
+      padding-left: 25px;
+    }
+
+    .left-navbar-logo-row .logo-img {
+      width: 131px;
+      height: 40px;
+    }
+
+    .left-navbar-2nd-row {
+      padding-top: 25px;
+    }
+
+    .left-navbar-2nd-row li {
+      display: flex;
+      height: 40px;
+      border-left: 3px solid transparent;
+      padding-left: 25px;
+      align-items: center;
+    }
+
+    .left-navbar-2nd-row li:first-child {
+      border-left: 3px solid rgb(30, 215, 96);
+    }
+
+    .left-navbar-2nd-row li:first-child a {
+      color: white;
+    }
+
+    .left-navbar-2nd-row li:first-child a svg path {
+      fill: white;
+    }
+
+    .left-navbar-2nd-row li svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .left-navbar-2nd-row li span {
+      margin-left: 8px;
+      vertical-align: middle;
     }
   /* /left navbar */
 
