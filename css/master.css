@@ -9,6 +9,10 @@
     font-size: 16px;
   }
 
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
   /* left navbar */
     #left-navbar {
       position: absolute;
@@ -16,7 +20,7 @@
       left: 0;
       width: 230px;
       height: 100vh;
-      background-color: rgba(0,0,0,.8);
+      background-color: rgba(0, 0, 0, .8);
     }
   /* /left navbar */
 
