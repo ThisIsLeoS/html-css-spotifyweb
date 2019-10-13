@@ -1,43 +1,43 @@
-.left-navbar-logo-section/* reset rules */
-a {
-  color: black;
-}
+/* reset rules */
+  a {
+    color: black;
+  }
 
-a:focus,
-a:hover {
-  text-decoration: none;
-}
+  a:focus,
+  a:hover {
+    text-decoration: none;
+  }
 
-h2 {
+  h2 {
 
-  /* to overwrite bootstrap's CSS */
-  margin-bottom: 0;
-}
+    /* to overwrite bootstrap's CSS */
+    margin-bottom: 0;
+  }
 
-ul {
+  ul {
 
-  /* to overwrite bootstrap's CSS */
-  margin-bottom: 0;
-  padding-left: 0;
-}
+    /* to overwrite bootstrap's CSS */
+    margin-bottom: 0;
+    padding-left: 0;
+  }
 
-li {
-  list-style: none;
-}
+  li {
+    list-style: none;
+  }
 /* /reset rules */
 
 /* rules used or usable in different parts of the page */
-a {
-  transition: color .2s linear;
-}
+  a {
+    transition: color .2s linear;
+  }
 
-a svg {
-  transition: background-color .2s linear;
-}
+  a svg {
+    transition: background-color .2s linear;
+  }
 
-a svg path {
-  transition: fill .2s linear;
-}
+  a svg path {
+    transition: fill .2s linear;
+  }
 /* /rules used or usable in different parts of the page */
 
 /* rules used in specific parts of the page */
@@ -52,6 +52,7 @@ a svg path {
   body {
 
     /* to make a reference for the percentage heights of thix box's children */
+    min-width: 720px;
     height: 100%;
 
     font-family: 'Roboto', sans-serif;
@@ -108,13 +109,13 @@ a svg path {
     .left-navbar-home-search-section li {
       display: flex;
       height: 40px;
-      border-left: 3px solid transparent;
-      padding-left: 22px;
+      border-left: 4px solid transparent;
+      padding-left: 21px;
       align-items: center;
     }
 
     .left-navbar-home-search-section li:first-child {
-      border-left: 3px solid rgb(30, 215, 96);
+      border-left: 4px solid rgb(30, 215, 96);
     }
 
     .left-navbar-home-search-section li:first-child a {
@@ -228,16 +229,129 @@ a svg path {
     }
   /* /main */
 
-  /* footer */
-    body > footer {
+  /* now playing bar */
+    .now-playing-bar {
+      display: flex;
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
+      min-width: 720px;
       height: 90px;
+      padding: 0 25px 0 25px;
       background-color: rgba(0, 0, 0, .8);
+      color: #b3b3b3;
+      justify-content: space-between;
     }
-  /* /footer */
+
+    .now-playing-bar a {
+      color: #b3b3b3;
+    }
+
+    .left-section {
+      display: flex;
+      width: 30%;
+      align-items: center;
+    }
+
+    .left-section img {
+      width: 56px;
+      height: 56px;
+    }
+
+    .left-section .song-name-authors {
+      margin-left: 14px;
+      margin-right: 14px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .left-section .song-name-authors .song-name {
+      border-bottom: 1px solid transparent;
+    }
+
+    .left-section .song-name-authors .song-name:hover {
+      border-bottom: 1px solid white;
+    }
+
+    .left-section .song-name-authors a,
+    .left-section .song-name-authors span {
+      text-overflow: ellipsis;
+    }
+
+    .song-name-authors .song-name a {
+      color: white;
+    }
+
+    .left-section .song-name-authors .song-authors a:hover {
+      color: white;
+    }
+
+    .left-section .fa-heart:hover {
+      color: white;
+    }
+
+    .center-section {
+      width: 40%;
+      max-width: 722px;
+      padding: 0 25px;
+    }
+
+    .center-section .buttons-row {
+      display: flex;
+      height: 40%;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .center-section .buttons-row i {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .center-section .buttons-row i:hover {
+      color: white;
+    }
+
+    .center-section .bar-row {
+      display: flex;
+      height: 60%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .center-section .bar-row span {
+      font-size: 12px;
+    }
+
+    .center-section .bar-row .progress-bar-border {
+      height: 9px;
+      margin: 0 5px 0 5px;
+      border: 2px solid;
+      border-radius: 3px;
+      flex-grow: 1;
+    }
+
+    .center-section .bar-row .progress-bar-color {
+      width: 25%;
+      height: 100%;
+      border: 2px solid;
+      border-radius: 1px;
+      background-color: #b3b3b3;
+    }
+
+    .center-section .bar-row .progress-bar-color:hover {
+      background-color: rgb(30, 215, 96);
+      border: 1px solid rgb(30, 215, 96);
+    }
+
+    .right-section {
+      display: flex;
+      width: 30%;
+      background-color: green; /* debug */
+      align-items: center;
+    }
+  /* /now playing bar */
 
 /* /rules used in specific parts of the page */
 
