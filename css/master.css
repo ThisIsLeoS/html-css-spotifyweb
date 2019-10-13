@@ -1,4 +1,4 @@
-/* reset rules */
+.left-navbar-logo-section/* reset rules */
 a {
   color: black;
 }
@@ -8,18 +8,31 @@ a:hover {
   text-decoration: none;
 }
 
+h2 {
+
+  /* to overwrite bootstrap's CSS */
+  margin-bottom: 0;
+}
+
 ul {
 
-  /* to overwrite declarations from bootstrap's reboot */
+  /* to overwrite bootstrap's CSS */
   margin-bottom: 0;
   padding-left: 0;
+}
 
+li {
+  list-style: none;
 }
 /* /reset rules */
 
 /* rules used or usable in different parts of the page */
 a {
   transition: color .2s linear;
+}
+
+a svg {
+  transition: background-color .2s linear;
 }
 
 a svg path {
@@ -33,8 +46,7 @@ a svg path {
     /* to make a reference for the percentage heights of thix box's children */
     height: 100%;
 
-    font-size: 16px;
-    letter-spacing: .015em;
+    font-size: 14px;
   }
 
   body {
@@ -43,6 +55,7 @@ a svg path {
     height: 100%;
 
     font-family: 'Roboto', sans-serif;
+    letter-spacing: .04rem;
   }
 
   .left-navbar-and-main-container {
@@ -56,9 +69,9 @@ a svg path {
     .left-navbar {
       display: flex;
       width: 230px;
-      padding: 20px 0;
-      background-color: rgba(0, 0, 0, .8);
+      background-color: #181818;
       color: #b3b3b3;
+      overflow-y: auto;
       flex-direction: column;
     }
 
@@ -70,51 +83,138 @@ a svg path {
       color: white;
     }
 
+    .left-navbar svg path {
+      fill: #b3b3b3;
+    }
+
     .left-navbar a:hover svg path {
       fill: white;
     }
 
-    .left-navbar-logo-row {
+    .left-navbar-logo-section {
       padding-left: 25px;
+      padding-top: 20px;
     }
 
-    .left-navbar-logo-row .logo-img {
+    .left-navbar-logo-section .logo-img {
       width: 131px;
       height: 40px;
     }
 
-    .left-navbar-2nd-row {
+    .left-navbar-home-search-section {
       padding-top: 25px;
     }
 
-    .left-navbar-2nd-row li {
+    .left-navbar-home-search-section li {
       display: flex;
       height: 40px;
       border-left: 3px solid transparent;
-      padding-left: 25px;
+      padding-left: 22px;
       align-items: center;
     }
 
-    .left-navbar-2nd-row li:first-child {
+    .left-navbar-home-search-section li:first-child {
       border-left: 3px solid rgb(30, 215, 96);
     }
 
-    .left-navbar-2nd-row li:first-child a {
+    .left-navbar-home-search-section li:first-child a {
       color: white;
     }
 
-    .left-navbar-2nd-row li:first-child a svg path {
+    .left-navbar-home-search-section li:first-child a svg path {
       fill: white;
     }
 
-    .left-navbar-2nd-row li svg {
+    .left-navbar-home-search-section li svg {
       width: 24px;
       height: 24px;
     }
 
-    .left-navbar-2nd-row li span {
+    .left-navbar-home-search-section li span {
       margin-left: 8px;
       vertical-align: middle;
+    }
+
+    .left-navbar-playlist-section {
+      padding: 25px 0 0 25px;
+
+      /* to make the navbar's footer always stick to the bottom of the navbar */
+      flex-grow: 1;
+    }
+
+    .left-navbar-playlist-section h2 {
+      font-size: 12px;
+    }
+
+    .left-navbar-playlist-section .create-playlist {
+      padding-top: 20px;
+    }
+
+    .left-navbar-playlist-section .create-playlist a svg {
+      width: 32px;
+      height: 32px;
+      background-color: #b3b3b3;
+    }
+
+    .left-navbar-playlist-section .create-playlist a svg path {
+      fill: black;
+    }
+
+    .left-navbar-playlist-section .create-playlist a:hover svg {
+      background-color: white;
+    }
+
+    .left-navbar-playlist-section .create-playlist a:hover svg path {
+      fill: black;
+    }
+
+    .left-navbar-playlist-section .create-playlist a span {
+      padding-left: 8px;
+    }
+
+    .left-navbar-playlist-section .playlist {
+      padding-top: 22px;
+    }
+
+    .left-navbar-playlist-section .playlist li {
+      padding-top: 14px;
+    }
+
+    .left-navbar-playlist-section .playlist li:first-child {
+      padding-top: 0;
+    }
+
+    .left-navbar footer {
+      padding: 25px 25px 20px 25px;
+    }
+
+    .left-navbar footer .download span,
+    .left-navbar footer .account span {
+      padding-left: 8px;
+    }
+
+    .left-navbar footer .download svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .left-navbar footer .account {
+      margin-top: 7px;
+      padding-top: 7px;
+      border-top: 1px solid;
+    }
+
+    .left-navbar footer .account svg {
+      width: 23px;
+      height: 28px;
+    }
+
+    .left-navbar footer .account svg path {
+      fill: white;
+    }
+
+    .left-navbar footer .account span {
+      color: white;
     }
   /* /left navbar */
 
@@ -129,13 +229,13 @@ a svg path {
   /* /main */
 
   /* footer */
-    footer {
+    body > footer {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
       height: 90px;
-      background-color: #282828;
+      background-color: rgba(0, 0, 0, .8);
     }
   /* /footer */
 
