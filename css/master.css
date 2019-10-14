@@ -38,6 +38,57 @@
   a svg path {
     transition: fill .2s linear;
   }
+
+  /* progress bar */
+  /*
+  to have a complete progress bar you need to:
+  1) add the following html code (or an analogous one):
+    <div class="progress-bar-border">
+      <div class="progress-bar-color">
+        <div class="progress-bar-round-button">
+        </div>
+      </div>
+    </div>
+  2) add the desired width to the .progress-bar-border
+  3) add the desidred width to the .progress-bar-color
+  */
+    .progress-bar-border {
+      height: 9px;
+      margin: 0 5px 0 5px;
+      border: 2px solid;
+      border-radius: 3px;
+    }
+
+    .progress-bar-color {
+      display: flex;
+      height: 100%;
+      border: 2px solid;
+      border-radius: 1px;
+      background-color: #b3b3b3;
+      justify-content: flex-end;
+    }
+
+    .progress-bar-border:hover .progress-bar-color {
+      background-color: rgb(30, 215, 96);
+      border: 2px solid rgb(30, 215, 96);
+    }
+
+    .progress-bar-round-button {
+      visibility: hidden;
+      position: relative;
+      left: 8px;
+      bottom: 6px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #b3b3b3;
+    }
+
+    .progress-bar-border:hover .progress-bar-round-button {
+      visibility: visible;
+    }
+  /* /progress bar */
+
 /* /rules used or usable in different parts of the page */
 
 /* rules used in specific parts of the page */
@@ -225,7 +276,7 @@
       /* to make this box fill all the remaining space */
       flex-grow: 1;
 
-      background-image: linear-gradient(to right, rgb(44, 84, 49), rgb(20, 38, 22));
+      background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
     }
   /* /main */
 
@@ -265,13 +316,14 @@
       border-bottom: 1px solid transparent;
       overflow: hidden;
       text-overflow: ellipsis;
+      transition: border-bottom .2s linear;
     }
 
     .left-section .song-name-authors .song-name:hover {
       border-bottom: 1px solid white;
     }
 
-    .song-name-authors .song-name a {
+    .left-section .song-name-authors .song-name a {
       color: white;
     }
 
@@ -289,7 +341,7 @@
     }
 
     .center-section {
-      width: 40%;
+      width: 54%;
       max-width: 722px;
       padding: 0 25px;
     }
@@ -321,49 +373,37 @@
       font-size: 12px;
     }
 
-    .center-section .bar-row .progress-bar-border {
-      height: 9px;
-      margin: 0 5px 0 5px;
-      border: 2px solid;
-      border-radius: 3px;
+    .center-section .progress-bar-border {
       flex-grow: 1;
     }
 
-    .center-section .bar-row .progress-bar-color {
-      display: flex;
+    .center-section .progress-bar-color {
       width: 25%;
-      height: 100%;
-      border: 2px solid;
-      border-radius: 1px;
-      background-color: #b3b3b3;
-      justify-content: flex-end;
-    }
-
-    .center-section .bar-row .progress-bar-border:hover .progress-bar-color {
-      background-color: rgb(30, 215, 96);
-      border: 2px solid rgb(30, 215, 96);
-    }
-
-    .center-section .bar-row .round-button {
-      visibility: hidden;
-      position: relative;
-      left: 8px;
-      bottom: 6px;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: #b3b3b3;
-    }
-
-    .center-section .bar-row .progress-bar-border:hover .round-button {
-      visibility: visible;
     }
 
     .right-section {
       display: flex;
-      width: 30%;
-      background-color: green; /* debug */
+      width: 26%;
+      justify-content: flex-end;
       align-items: center;
+    }
+
+    .right-section i {
+      padding-left: 20px;
+    }
+
+    .right-section i:hover {
+      color: white;
+    }
+
+    .right-section .progress-bar-border {
+      width: 80px;
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+
+    .right-section .progress-bar-color {
+      width: 25%;
     }
   /* /now playing bar */
 
