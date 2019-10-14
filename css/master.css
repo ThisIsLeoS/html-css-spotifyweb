@@ -330,16 +330,33 @@
     }
 
     .center-section .bar-row .progress-bar-color {
+      display: flex;
       width: 25%;
       height: 100%;
       border: 2px solid;
       border-radius: 1px;
       background-color: #b3b3b3;
+      justify-content: flex-end;
     }
 
     .center-section .bar-row .progress-bar-border:hover .progress-bar-color {
       background-color: rgb(30, 215, 96);
-      border: 1px solid rgb(30, 215, 96);
+      border: 2px solid rgb(30, 215, 96);
+    }
+
+    .center-section .bar-row .round-button {
+      visibility: hidden;
+      position: relative;
+      left: 8px;
+      bottom: 6px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #b3b3b3;
+    }
+
+    .center-section .bar-row .progress-bar-border:hover .round-button {
+      visibility: visible;
     }
 
     .right-section {
