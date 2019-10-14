@@ -232,11 +232,6 @@
   /* now playing bar */
     .now-playing-bar {
       display: flex;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      min-width: 720px;
       height: 90px;
       padding: 0 25px 0 25px;
       background-color: rgba(0, 0, 0, .8);
@@ -268,19 +263,21 @@
 
     .left-section .song-name-authors .song-name {
       border-bottom: 1px solid transparent;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .left-section .song-name-authors .song-name:hover {
       border-bottom: 1px solid white;
     }
 
-    .left-section .song-name-authors a,
-    .left-section .song-name-authors span {
-      text-overflow: ellipsis;
-    }
-
     .song-name-authors .song-name a {
       color: white;
+    }
+
+    .left-section .song-name-authors .song-authors {
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .left-section .song-name-authors .song-authors a:hover {
@@ -340,7 +337,7 @@
       background-color: #b3b3b3;
     }
 
-    .center-section .bar-row .progress-bar-color:hover {
+    .center-section .bar-row .progress-bar-border:hover .progress-bar-color {
       background-color: rgb(30, 215, 96);
       border: 1px solid rgb(30, 215, 96);
     }
