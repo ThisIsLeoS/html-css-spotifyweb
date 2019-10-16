@@ -3,7 +3,6 @@
     color: black;
   }
 
-  a:focus,
   a:hover {
     color: white !important;
     text-decoration: none;
@@ -58,6 +57,7 @@
       margin: 0 5px 0 5px;
       border: 2px solid;
       border-radius: 3px;
+      cursor: pointer;
     }
 
     .progress-bar-color {
@@ -77,7 +77,7 @@
     .progress-bar-round-button {
       visibility: hidden;
       position: relative;
-      left: 8px;
+      left: 9px;
       bottom: 6px;
       width: 15px;
       height: 15px;
@@ -445,6 +445,7 @@
 
     .left-section .fa-heart:hover {
       color: white;
+      cursor: pointer;
     }
 
     .center-section {
@@ -455,14 +456,17 @@
 
     .center-section .buttons-row {
       display: flex;
-      height: 40%;
+      height: 42%;
       justify-content: center;
       align-items: flex-end;
     }
-
-    .center-section .buttons-row i {
+    .center-section .buttons-row .icon-container {
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    .center-section .buttons-row i {
+      cursor: pointer;
     }
 
     .center-section .buttons-row i:hover {
@@ -471,7 +475,7 @@
 
     .center-section .bar-row {
       display: flex;
-      height: 60%;
+      height: 58%;
       justify-content: center;
       align-items: center;
     }
@@ -497,6 +501,7 @@
 
     .right-section i {
       padding-left: 20px;
+      cursor: pointer;
     }
 
     .right-section i:hover {
