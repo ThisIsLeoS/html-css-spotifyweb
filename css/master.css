@@ -279,15 +279,25 @@
       overflow-y: auto;
     }
 
+    /* used to give margins without shrinking main's background color */
+    .main-inside-container {
+      margin: 35px 30px;
+    }
+
+    main img {
+
+      /* to set the alternative text's color */
+      color: white;
+    }
+
     .top-navbar ul {
       display: flex;
-      margin: 35px 30px 0;
       justify-content: center;
       flex-wrap: wrap;
     }
 
     .top-navbar ul li {
-      padding: 20px;
+      padding: 0 20px 20px 20px;
     }
 
     .top-navbar ul li a {
@@ -315,7 +325,7 @@
     }
 
     .popular-playlists-section {
-      margin: 40px 30px 0;
+      margin-top: 25px;
     }
 
     .popular-playlists-section-1st-row {
@@ -363,7 +373,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 46px;
-      height: 46px;
+      height: auto;
       transition: transform .2s linear;
       visibility: hidden;
     }
@@ -377,6 +387,7 @@
     }
 
     .popular-playlists-section-2nd-row .playlist-cover .play-btn-img:hover {
+      cursor: pointer;
       transform: translate(-50%, -50%) scale(1.24);
     }
 
@@ -460,6 +471,7 @@
       justify-content: center;
       align-items: flex-end;
     }
+
     .center-section .buttons-row .icon-container {
       padding-left: 15px;
       padding-right: 15px;
