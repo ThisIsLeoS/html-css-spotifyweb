@@ -8,7 +8,7 @@
     text-decoration: none;
   }
 
-  h2 {
+  h2, p, ul {
 
     /* to overwrite bootstrap's CSS */
     margin-bottom: 0;
@@ -17,7 +17,6 @@
   ul {
 
     /* to overwrite bootstrap's CSS */
-    margin-bottom: 0;
     padding-left: 0;
   }
 
@@ -325,59 +324,65 @@
       visibility: visible;
     }
 
-    /* popular-playlists-section and popular-artists-section */
+    /* popular-playlists-section, focus-section and popular-artists-section */
       .popular-playlists-section {
         margin-top: 25px;
       }
 
+      .focus-section,
       .popular-artists-section {
         margin-top: 45px;
       }
 
-      .playlists-section-1st-row {
+      .playlists-section-title-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
 
-      .playlists-section-1st-row h1 {
+      .playlists-section-title-row h1 {
         border-bottom: 1px solid transparent;
         transition: border-bottom .2s linear;
       }
 
-      .playlists-section-1st-row h1 a {
+      .playlists-section-title-row h1 a {
         color: white;
       }
 
-      .playlists-section-1st-row h1:hover {
+      .playlists-section-title-row h1:hover {
         border-bottom: 1px solid white;
       }
 
-      .playlists-section-1st-row > a {
+      .playlists-section-title-row > a {
         color: rgba(255, 255, 255, .6);
         font-size: 13px;
         font-weight: bold;
       }
 
-      .playlists-section-2nd-row {
+      .playlists-section-description-row {
+        color: rgba(255, 255, 255, .6);
+        margin-bottom: 7px;
+      }
+
+      .playlists-section-covers-row {
         padding-top: 20px;
       }
 
-      .playlists-section-2nd-row .playlist-cover {
+      .playlists-section-covers-row .playlist-cover {
         position: relative;
       }
 
-      .playlists-section-2nd-row .playlist-cover .playlist-cover-img {
+      .playlists-section-covers-row .playlist-cover .playlist-cover-img {
         width: 220px;
         max-width: 100%;
         height: auto;
       }
 
-      .popular-artists-section-2nd-row .playlist-cover .playlist-cover-img {
+      .popular-artists-section-covers-row .playlist-cover .playlist-cover-img {
         border-radius: 50%;
       }
 
-      .playlists-section-2nd-row .playlist-cover .play-btn-img {
+      .playlists-section-covers-row .playlist-cover .play-btn-img {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -388,29 +393,29 @@
         visibility: hidden;
       }
 
-      .playlists-section-2nd-row .playlist-cover:hover .playlist-cover-img {
+      .playlists-section-covers-row .playlist-cover:hover .playlist-cover-img {
         opacity: 0.2;
       }
 
-      .playlists-section-2nd-row .playlist-cover:hover .play-btn-img {
+      .playlists-section-covers-row .playlist-cover:hover .play-btn-img {
         visibility: visible;
       }
 
-      .playlists-section-2nd-row .playlist-cover .play-btn-img:hover {
+      .playlists-section-covers-row .playlist-cover .play-btn-img:hover {
         cursor: pointer;
         transform: translate(-50%, -50%) scale(1.24);
       }
 
-      .playlists-section-2nd-row .playlist-name {
+      .playlists-section-covers-row .playlist-name {
         padding-top: 15px;
         text-align: center;
       }
 
-      .playlists-section-2nd-row .playlist-name a {
+      .playlists-section-covers-row .playlist-name a {
         color: white;
         font-size: 15px;
       }
-    /* /popular-playlists-section and popular-artists-section */
+    /* /popular-playlists-section, focus-section and popular-artists-section */
 
   /* /main */
 
