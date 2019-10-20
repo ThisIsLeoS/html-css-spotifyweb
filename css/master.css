@@ -101,9 +101,9 @@
   }
 
   body {
+    min-width: 720px;
 
     /* to make a reference for the percentage heights of thix box's children */
-    min-width: 720px;
     height: 100%;
 
     font-family: 'Roboto', sans-serif;
